@@ -39,8 +39,8 @@ pip install milo-usage-forecaster   # not yet on PyPI — coming soon
 Until then, install from source:
 
 ```bash
-git clone https://github.com/miloantaeus/milo-usage-forecaster.git
-cd milo-usage-forecaster
+git clone https://github.com/miloantaeus/milo-usage-forecaster-mcp.git
+cd milo-usage-forecaster-mcp
 pip install -e .
 ```
 
@@ -149,7 +149,7 @@ different pain points: "I spent $400 last month, was that right?" vs
 ## Development
 
 ```bash
-cd milo-usage-forecaster
+cd milo-usage-forecaster-mcp
 python -m pytest -q       # >= 50 tests
 python -m milo_usage_forecaster  # boot the MCP stdio server
 ```
