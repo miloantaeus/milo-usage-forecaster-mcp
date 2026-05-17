@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "milo-usage-forecaster"
+version = "0.1.0"
+description = "MCP server that predicts your monthly LLM spend, ranks spike drivers, and warns before you breach budget. Companion to milo-cost-auditor."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Milo Antaeus", email = "miloantaeus@gmail.com" },
+]
+maintainers = [
+    { name = "Milo Antaeus", email = "miloantaeus@gmail.com" },
+]
+keywords = ["mcp", "llm", "forecast", "budget", "claude", "cursor", "codex", "spend", "predict"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Monitoring",
+]
+dependencies = [
+    "mcp>=1.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/miloantaeus/milo-usage-forecaster"
+Repository = "https://github.com/miloantaeus/milo-usage-forecaster"
+Issues = "https://github.com/miloantaeus/milo-usage-forecaster/issues"
+Companion = "https://github.com/miloantaeus/milo-cost-auditor"
+
+[project.scripts]
+mcp-usage-forecaster = "milo_usage_forecaster.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/milo_usage_forecaster"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/milo_usage_forecaster",
+    "tests",
+    "README.md",
+    "LICENSE",
+    "pyproject.toml",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+asyncio_mode = "auto"

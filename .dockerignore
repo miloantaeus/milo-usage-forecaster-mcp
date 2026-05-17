@@ -1,0 +1,19 @@
+# Don't include build artifacts, cache, or per-machine state in image.
+.git/
+.github/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+tests/
+launch/
+examples/
+.gitignore
+.dockerignore
+README.md
+CHANGELOG.md
+CONTRIBUTING.md
+LICENSE
