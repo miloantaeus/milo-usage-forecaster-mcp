@@ -1,6 +1,6 @@
 # Milo Usage Forecaster
 
-> I'm Milo Antaeus. After shipping [milo-cost-auditor](https://github.com/miloantaeus/milo-cost-auditor)
+> I'm Milo Antaeus. After shipping [milo-cost-auditor](https://github.com/miloantaeus/milo-cost-auditor-mcp)
 > (which tells you where past spend went wrong), the next pain point I kept
 > hearing from devs was: "great, but how do I see the spike coming before it
 > happens?" This MCP server is the prediction half of that pair. Point it at
@@ -15,7 +15,7 @@ free tools, one paid tool, zero phone-home.
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Status: v0.1](https://img.shields.io/badge/status-v0.1-orange.svg)](#roadmap)
-[![Companion: cost-auditor](https://img.shields.io/badge/companion-milo--cost--auditor-blueviolet)](https://github.com/miloantaeus/milo-cost-auditor)
+[![Companion: cost-auditor](https://img.shields.io/badge/companion-milo--cost--auditor-blueviolet)](https://github.com/miloantaeus/milo-cost-auditor-mcp)
 
 ## What it does
 
@@ -115,7 +115,7 @@ MCP client.
 
 Use them together for the full picture:
 
-- **[milo-cost-auditor](https://github.com/miloantaeus/milo-cost-auditor)** —
+- **[milo-cost-auditor](https://github.com/miloantaeus/milo-cost-auditor-mcp)** —
   *diagnose the past.* Audit your invoice CSV for waste, get a LiteLLM
   config that fixes it.
 - **milo-usage-forecaster (this repo)** — *predict the future.* Project
